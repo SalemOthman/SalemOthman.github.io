@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salem Othman's Portfolio</title>
+    <style>
+        /* Theme Variables */
+        :root {
+            --background-color: #ffffff; /* White */
+            --text-color: #000000; /* Black */
+            --primary-color: #4a4a4a; /* Dark Gray */
+            --secondary-color: #f2f2f2; /* Light Gray */
+            --nav-bg-color: #333333; /* Darker Gray */
+            --nav-text-color: #ffffff; /* White */
+            --footer-bg-color: #4a4a4a; /* Dark Gray */
+            --footer-text-color: #ffffff; /* White */
+        }
+
+        /* Other Themes */
+        .light-theme {
+            --background-color: #f8f8f8; /* Very Light Gray */
+            --text-color: #333333; /* Dark Gray */
+            --primary-color: #ffffff; /* White */
+            --secondary-color: #e5e5e5; /* Light Gray */
+            --nav-bg-color: #f0f0f0; /* Lighter Gray */
+            --nav-text-color: #333333; /* Dark Gray */
+            --footer-bg-color: #e5e5e5; /* Light Gray */
+            --footer-text-color: #333333; /* Dark Gray */
+        }
+
+        .dark-theme {
+            --background-color: #252525; /* Very Dark Gray */
+            --text-color: #f8f8f8; /* White */
+            --primary-color: #3a3a3a; /* Dark Gray */
+            --secondary-color: #2e2e2e; /* Darker Gray */
+            --nav-bg-color: #1f1f1f; /* Darkest Gray */
+            --nav-text-color: #f8f8f8; /* White */
+            --footer-bg-color: #2e2e2e; /* Darker Gray */
+            --footer-text-color: #f8f8f8; /* White */
+        }
+
+        .nature-theme {
+            --background-color: #dffed9; /* Light Green */
+            --text-color: #2e4720; /* Dark Green */
+            --primary-color: #addfad; /* Medium Green */
+            --secondary-color: #c9e2b3; /* Lighter Green */
+            --nav-bg-color: #92c792; /* Green */
+            --nav-text-color: #2e4720; /* Dark Green */
+            --footer-bg-color: #addfad; /* Medium Green */
+            --footer-text-color: #2e4720; /* Dark Green */
+        }
+
+        .contrast-theme {
+            --background-color: #ffffff; /* White */
+            --text-color: #000000; /* Black */
+            --primary-color: #000000; /* Black */
+            --secondary-color: #ffdd00; /* Yellow */
+            --nav-bg-color: #000000; /* Black */
+            --nav-text-color: #ffffff; /* White */
+            --footer-bg-color: #000000; /* Black */
+            --footer-text-color: #ffffff; /* White */
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        .footer {
+            background-color: var(--footer-bg-color);
+            color: var(--footer-text-color);
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .nav {
+            background-color: var(--nav-bg-color);
+            overflow: hidden;
+        }
+
+        .nav a {
+            float: left;
+            display: block;
+            color: var(--nav-text-color);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .main-content {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, a {
+            color: var(--primary-color);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Theme Selector Styles */
+        .theme-selector {
+            text-align: center;
+            padding: 1em;
+        }
+
+        .theme-button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="contrast-theme">
+
+<div class="theme-selector">
+    <button class="theme-button" onclick="setTheme('default')">Default</button>
+    <button class="theme-button" onclick="setTheme('light')">Light</button>
+    <button class="theme-button" onclick="setTheme('dark')">Dark</button>
+    <button class="theme-button" onclick="setTheme('nature')">Nature</button>
+    <button class="theme-button" onclick="setTheme('contrast')">High Contrast</button>
+</div>
+
+<div class="header">
+    <h1>Salem Othman</h1>
+    <p>Academic and Research Professional</p>
+</div>
+
+<!-- Navigation and Content Sections -->
+
+<div class="nav">
+    <a href="#about">About</a>
+	<a href="#education">Education</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#professional-service">Professional Service</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="container">
+    <div class="main-content">
+        <!-- About Section -->
+		<section id="about">
+			<h2>About Me</h2>
+			<p>Dedicated Associate Professor with a Ph.D. in Computer Science, specializing in Big Data Systems, Machine Learning, and Data Mining. Passionate about fine-tuning Large Language Models (LLMs) and Online Social Networks (OSNs) analysis. Committed to fostering academic excellence and innovative research.</p>
+		</section>
+		<!-- Education Section -->
+		<section id="education">
+		<h2>Education</h2>
+		<ul>
+			<li>Ph.D. in Computer Science, Kent State University, Ohio (August 2018)</li>
+			<li>M.S. in Computer Science, Attahadi (Sirte) University, Libya (November 2006)</li>
+			<li>B.S. in Computer Science, Omar Al-Mukhtar University, Libya (September 2001)</li>
+		</ul>
+		</section>
+        <!-- Research Section -->
+		<section id="research">
+			<h2>Research</h2>
+			<p>My research interests span across Big Data, Machine Learning, and Social Network Analysis. I am particularly passionate about exploring the intricacies and potential of Large Language Models (LLMs) and their applications in various fields.</p>
+			
+			<h3>Key Research Projects</h3>
+			<ul>
+				<li>
+					<strong>Emojiset Mining Research:</strong> A project focused on understanding the contextual and emotional nuances conveyed by emojis in digital communication. This research has led to the development of www.sogoresearch.com, a platform for detailed emoji analysis.
+				</li>
+				<li>
+					<strong>Epidemiology Research:</strong> This project involves leveraging Big Data and Machine Learning techniques to better understand epidemiological trends and patterns. More details can be found at www.sogoresearch.com/epidemiology.
+				</li>
+				<li>
+					<strong>Real-Time Smart Feedback System for Effective Course Evaluation:</strong> A system designed to enhance the feedback process in educational settings, allowing for more timely and effective evaluations. Visit www.rteval.com for more information.
+				</li>
+				<li>
+					<strong>Web-Based Learning Management System:</strong> Developing a comprehensive platform, www.sograder.com, that facilitates online learning and assessment, catering to the evolving needs of modern education.
+				</li>
+			</ul>
+
+			<h3>Selected Peer-Reviewed Publications</h3>
+			<ul>
+				<!-- Existing publications -->
+				<li>D. Labrie, A. Hogan, A. Galvin, and S. Othman, “Order Matters: Emojiset Mining,” International Workshop on Social Impact of AI for Africa (SIAIA-23), 2023.</li>
+				<li>Salem Othman, Sami Alshalwi, Endi Caushi, “Sentiment of EmojiSets: How Emoji Sequences Improve Sentiment Cognition,” IEEE ICCI*CC’22, 2022.</li>
+				<li>Danielle Shackley, Brendan Dao, Salem Othman, “Classification of Debt Vulnerability in Sub-Saharan African Countries Using Various Machine Learning Tree-Based Algorithms,” International Workshop on Social Impact of AI for Africa (SIAIA-22), 2022.</li>
+				<li>Yetunde Folajimi, Memo Egezer, Salem Othman, Durga suresh-Menon, “Globalization in Computer Science Education: A Case Study of Wentworth’s Open House for Nigeria,” International Workshop on Social Impact of AI for Africa (SIAIA-22), 2022.</li>
+				<li>Salem Othman, Marisha Rawlins, Afsaneh Ghanavati, “Real-Time Smart Feedback System for Effective Course Evaluation,” 2021 ASEE Northeast Section Conference, Worcester Polytechnic Institute, Worcester, October 21–23, 2021.</li>
+				<li>Phil Roesch, Caleb Franco, William Bernier, Salem Othman, “Automatic Extraction of Emojiset,” Intelligent Computing 2021.</li>
+				<li>Sancho Rodriguez Corrales, Edwin Armas, Martin King, Joshua Moorehead, Omar Abou Nassif, Mourad Salem Othman, “MMR: Multiple Majority Rule Model with Bias,” Proceedings of the 11th International Conference on Simulation and Modeling Methodologies, Technologies and Applications – SIMULTECH 2021.</li>
+				<li>Hasan Alsaif, Salem Othman, “Analyzing Co-occurrence Networks of Emojis on Twitter,” Intelligent Computing 2021.</li>
+				<li>Jose Fossi, Adam Dzwonkowski, Salem Othman, “Analyzing Music Genre Popularity via Tweets,” Intelligent Computing 2021.</li>
+				<li>Adbelrjal F. N. A. Ismail and S. Othman, “The impact of online social community platforms on the elderly's daily activities: a systematic literature review,” Int J Future Gener Commun Netw 13.1 (2020): 877-902 (Journal).</li>
+				<li>Nafa F, Othman S., & Khan J.I., “Extending Cognitive Skill Classification of Common Verbs in the Domain of Computer Science Algorithms’ Knowledge Units,” Proceedings of the 9th International Conference on Computer Supported Education (CSEDU) 2017.</li>
+				<li>Othman S., Khan J. I., & Nafa F., “Does Location Matter?: The Efficiency of Request Propagation Based on Location in Online Social Networks,” International Conference on Human-Computer Interaction (HCI) 2016.</li>
+				<li>Nafa F., Othman S., & Khan J. I., “Automatic Concepts’ Classification Based On Bloom’s Taxonomy Using Text analysis and the naïve Bayes classifier Method,” International Conference on Computer Supported Education (CSEDU) 2016.</li>
+				<li>Othman S., Khan J. I., & Nafa F., “Does Knowledge Matter?: Efficiency of Routing Delay under Imperfect Knowledge in Online Social Networks,” International Conference on Computer Games Multimedia and Allied Technology (CGAT) 2016.</li>
+				<li>Nafa F., Othman S., Khan J., & Babour A., “Mining Cognitive Skills Levels of Knowledge Units in Text Using Graph Triangularity Mining,” IEEE/WIC/ACM International Conference on Web Intelligence (WI) 2016.</li>
+				<li>Nafa F., Khan J., Othman S., & Babour A., “Discovering Bloom Taxonomic Relationships between Knowledge Units Using Semantic Graph Triangularity Mining,” International Conference on Cyber-enabled Distributed Computing and Knowledge Discovery (CyberC) 2016.</li>
+				<li>Nafa F., Othman S., Khan J., & Babour A., “Semantic Graph Transitivity for Discovering Bloom Taxonomic Relationships between Knowledge Units in a Text,” Proceedings of the Fifth International Conference on Intelligent Systems and Applications (INTELLI) 2016.</li>
+				<li>Othman S., & Khan J. I., “SOR: A Protocol for Requests Dissemination in Online Social Networks,” International Conference on Social Computing Behavioral-Cultural Modeling & Prediction and Behavior Representation in Modeling and Simulation SBP-(BRIMS) 2015.</li>
+				<li>Faraj A. El-Mouadib, Salem A., & Othman M., “Combining some of the improvements of Apriori algorithm,” 2007 </li>
+			</ul>
+		</section>
+
+
+        <!-- Teaching Section -->
+<section id="teaching">
+    <h2>Teaching</h2>
+    <p>As an Associate Professor at Wentworth Institute of Technology, I have had the privilege of imparting knowledge and skills in a range of courses, spanning both undergraduate and graduate levels. My teaching philosophy revolves around creating an interactive learning environment, integrating practical applications with theoretical knowledge.</p>
+    
+    <h3>Undergraduate Courses Taught in the USA</h3>
+    <ul>
+        <li><strong>Algorithms:</strong> Comprehensive coverage of algorithm design, analysis, and complexity. Taught in multiple semesters from Fall 2019 to Spring 2024.</li>
+        <li><strong>Network Programming:</strong> Focused on the essentials of network application development. Offered from Fall 2018 through Spring 2024.</li>
+        <li><strong>Big Data Programming:</strong> Introduction to big data concepts and programming, taught in the summers of 2019 through 2022.</li>
+        <li><strong>Social Network Analysis:</strong> A special course offered in Fall 2018, exploring the dynamics of social networks.</li>
+        <li><strong>Machine Learning:</strong> An introductory course into the world of machine learning, offered in Summer 2020.</li>
+        <li><strong>Senior Project:</strong> Guiding students through their capstone projects, offered in Summer 2022.</li>
+        <li><strong>Web Development (COMP 4650):</strong> A practical approach to modern web technologies, taught in Spring 2023.</li>
+        <li><strong>Big Data Analysis using Machine Learning Techniques [Independent Study]:</strong> A focused study course offered in Summer 2019.</li>
+        <li><strong>Emoji Analysis Using Data Mining Techniques [Independent Study]:</strong> An innovative course offered in Spring 2020.</li>
+        <li><strong>Introduction to Structured Database Environments:</strong> Offering foundational knowledge in database systems, scheduled for Fall 2023.</li>
+    </ul>
+
+    <h3>Graduate Courses Taught in the USA</h3>
+    <ul>
+        <li><strong>Modern Computing [MS Applied Computer Science]:</strong> A course covering advanced computing concepts, taught in multiple semesters from Spring 2021 to Fall 2022.</li>
+        <li><strong>Data Mining [MS Applied Computer Science]:</strong> Providing in-depth knowledge in data mining techniques, offered in Fall 2022 and Spring 2022.</li>
+        <li><strong>Principles of Machine Learning [MS Applied Computer Science]:</strong> An advanced course in machine learning principles, taught in Fall 2021.</li>
+        <li><strong>Big Data Systems [MS Data Science]:</strong> Focused on big data technologies and systems, offered in Summer 2022 and Spring 2023.</li>
+        <li><strong>Applied Business Analytics [MS Business Analytics]:</strong> Integrating analytics into business practices, taught in Spring 2022.</li>
+        <li><strong>Python Programming:</strong> A comprehensive course on Python programming, planned for Fall 2023.</li>
+    </ul>
+	<h3>Future Courses (Planned for 2024)</h3>
+    <ul>
+	    <li>
+            <strong>Applied Large Language Models:</strong>This course focuses on the practical applications of Large Language Models (LLMs) across various domains. Students will study the fundamentals of LLMs, including architectures like GPT-3, BERT, and T5, and their deployment in text generation, semantic search, and chatbots. Emphasizing hands-on experience, the course will guide students through using and fine-tuning pre-trained models for specific applications, equipping them with the skills to address real-world challenges.
+        </li>
+        <li>
+            <strong>Advanced Topics in Large Language Models:</strong>This course delves into cutting-edge research and advancements in Large Language Models (LLMs), focusing on their role in Natural Language Processing (NLP). Covering seminal and contemporary papers, students will learn about the technical underpinnings, evolving capabilities, fine-tuning approaches, system design considerations, and ethical and security implications of LLMs. The course includes a significant research project, offering students a chance to engage practically with this evolving technology.
+        </li>
+    </ul>
+</section>
+
+        <!-- Service Section -->
+		<section id="professional-service">
+			<h2>Professional Service</h2>
+			<p>I am actively engaged in various academic and professional service activities, contributing to the development and governance of educational and research institutions.</p>
+			
+			<h3>Benghazi University</h3>
+			<ul>
+				<li>Chair, Quality Assurance Office (Institutional Research), 2009-2010</li>
+				<li>Member, Examinations Committee, 2007-2008</li>
+				<li>Member, Marks Recording Committee, 2006-2007</li>
+			</ul>
+
+			<h3>Kent State University (KSU)</h3>
+			<ul>
+				<li>Chair, Student Representative Academic Complaint Committee, Summer 2013</li>
+				<li>Chair, Student Representative Graduate Studies Committee, 2012-2013</li>
+			</ul>
+
+			<h3>Wentworth Institute Committees (WIT)</h3>
+			<ul>
+				<li>Member, Assistant Professor Hiring Committee, 2018-2019</li>
+				<li>Member, Graduate Curriculum committee (MSACS 4+1), 2018-Present</li>
+				<li>Member, Data Science Curriculum Committee, 2018</li>
+				<li>Member, Graduate Faculty Procedures Committee (MSACS), 2019-2020</li>
+				<li>Member, Assistant Professor Hiring Committee (Department of Applied Mathematics), 2019</li>
+				<li>Member, Master of Science in Applied Computer Science Curriculum Committee, 2020</li>
+				<li>Member, ABET Committee, 2020-Present</li>
+				<li>Member, Computer Science Curriculum Committee (BCOS CC), 2021</li>
+				<li>Member, Master of Data Science/Business Analytics Curriculum Committee, 2021-Present</li>
+				<li>Member, MS Cybersecurity Analytics Curriculum Committee, 2021-Present</li>
+				<li>Member, Grad Council representing Applied Computer Science Program, 2021-Present</li>
+				<li>Member, Faculty Nomination Task Force (Grad Council), 2021</li>
+				<li>Member, Institute Curriculum Committee (ICC), 2021-Present</li>
+				<li>Member, to hire a 7/8 grade science teacher at Saltonstall School, Salem MA, 2021</li>
+				<li>Member, Cyber/IT Search Committee (Hiring Committee), 2022</li>
+				<li>Member, Curriculum Committee (MS Cybersecurity Analytics), 2022</li>
+				<li>Member, Writing team, 2022</li>
+				<li>Member, SCDS 7-Year Master Plan Teams and Charges, 2022</li>
+				<li>Member of hiring committee of Associate Director of Digital Learning Environment, 2022</li>
+				<li>Chair, Cyber/IT Search Committee (Hiring Committee), 2023</li>
+				<li>Member, Assistant/Associate Professor Hiring Committee, 2023</li>
+			</ul>
+</section>
+
+
+        <!-- Contact Section -->
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>For inquiries or collaborations, feel free to reach out to me through the following channels:</p>
+			<ul>
+				<li>Email: <a href="mailto:sothman@kent.edu">sothman@kent.edu</a></li>
+				<li>LinkedIn: <a href="https://www.linkedin.com/in/salem-othman/" target="_blank">https://www.linkedin.com/in/salem-othman/</a></li>
+				<li>Office Phone: 617-989-4508</li>
+				<li>Office Address: Wentworth Institute of Technology, 550 Huntington Ave, Boston, MA, USA</li>
+			</ul>
+		</section>
+
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2023 Salem Othman</p>
+</div>
+
+<script>
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.body.className = themeName + '-theme';
+    }
+
+    (function() {
+        const savedTheme = localStorage.getItem('theme') || 'contrast';
+        setTheme(savedTheme);
+    })();
+</script>
+
+</body>
+</html>
